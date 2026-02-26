@@ -1,7 +1,7 @@
 "use client";
 
 import React, { useState } from "react";
-import { motion, AnimatePresence } from "framer-motion";
+import { motion, AnimatePresence, Variants } from "framer-motion";
 import { Star, ChevronDown, MapPin, Phone, CheckCircle, ShieldCheck, Clock, Award, Microscope, Sparkles, Play, Instagram, Linkedin, Facebook, Youtube, Users, PenTool, UserCheck, Target, MessageSquare, X } from "lucide-react";
 import { Inter, Playfair_Display } from "next/font/google";
 
@@ -229,7 +229,7 @@ export default function RejaliMedical() {
     setActiveFaq(activeFaq === index ? null : index);
   };
 
-  const fadeUp = {
+const fadeUp: Variants = {
     hidden: { opacity: 0, y: 30 },
     visible: { opacity: 1, y: 0, transition: { duration: 0.8, ease: "easeOut" } }
   };
